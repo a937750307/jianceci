@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>违规词检测</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>违规词检测</h1>
+      <p>粘贴文案，自动高亮违规词 · 纯前端运行 · 数据不离开浏览器</p>
+    </header>
+
+    <div class="toolbar">
+      <button class="btn btn-primary" id="clear">清空</button>
+      <span class="status" id="status">等待输入</span>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>文案输入</h2>
+        <textarea id="input" placeholder="在此粘贴或输入需要检测的文案…"></textarea>
+      </div>
+      <div class="card">
+        <h2>检测结果 <span class="count" id="count"></span></h2>
+        <div class="result empty" id="result"><span class="empty-hint">粘贴文案后自动检测…</span></div>
+      </div>
+    </div>
+
+    <div class="stats" id="stats"></div>
+
+    <div class="words-panel">
+      <div class="words-head">
+        <h2>自定义词</h2>
+        <div class="words-actions">
+          <button class="btn" id="import-btn">导入</button>
+          <button class="btn" id="export-btn">导出</button>
+          <button class="btn btn-primary" id="add-word-btn">添加词</button>
+        </div>
+      </div>
+      <input type="file" id="import-file" accept=".json,application/json" hidden>
+      <div class="words-input-row">
+        <input type="text" id="add-word" placeholder="输入新词，支持逗号/空格分隔多个">
+      </div>
+      <div class="words-input-row">
+        <input type="text" id="search-word" placeholder="搜索词表…">
+      </div>
+      <div class="words-list" id="words-list"></div>
+    </div>
+
+    <footer>点击标签可启用/禁用、点击✕删除自定义词</footer>
+  </div>
+
+  <div class="beian-bar">
+    <div class="beian-pc">
+      <span class="beian-disclaimer">本站内容仅供学习和交流，非商业用途</span>
+      <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer" class="beian-icp">浙ICP备2025187466号</a>
+      <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33030402001483" target="_blank" rel="noopener noreferrer" class="beian-gongan">
+        <img src="https://www.937788.xyz/gonganbeian.png" alt="公安备案" onerror="this.style.display='none'">
+        浙公网安备33030402001483号
+      </a>
+    </div>
+    <div class="beian-mobile">
+      <span class="beian-disclaimer">本站内容仅供学习和交流，非商业用途</span>
+      <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer" class="beian-icp">浙ICP备2025187466号</a>
+      <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33030402001483" target="_blank" rel="noopener noreferrer" class="beian-gongan">
+        <img src="https://www.937788.xyz/gonganbeian.png" alt="公安备案" onerror="this.style.display='none'">
+        浙公网安备33030402001483号
+      </a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
