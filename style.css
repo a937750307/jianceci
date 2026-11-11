@@ -299,6 +299,16 @@ footer {
   color: #a8a8a2;
 }
 
+footer a {
+  color: #4a4a4a;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+footer a:hover {
+  color: #2d2d2d;
+}
+
 /* 备案信息 */
 .beian-bar {
   width: 100%;
